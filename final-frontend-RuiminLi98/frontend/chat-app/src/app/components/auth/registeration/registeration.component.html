@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Ruimin Li">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register Page</title>
+</head>
+
+<body>
+<form id="registerFrom">
+  <h1 >User Registration</h1>
+  <br>
+  <p>User Name: <input type="text" id="loginName" name="loginName" required [(ngModel)]="inputName" placeholder="begin with letter">
+    <span id="nameValidity">{{ nameCheck }}</span>
+  </p>
+  <p>Display Name: <input type="text" id="loginDisplayName" name="loginDisplayName"  [(ngModel)]="inputDisplayName" placeholder="optional">
+  </p>
+  <p>Email address: <input type="text" id="loginEmail" name="loginEmail" required [(ngModel)]="inputEmail" placeholder="***@***">
+    <span id="emailValidity">{{ emailCheck }}</span>
+  </p>
+  <p>Phone number: <input type="text" id="loginPhone" name="loginPhone" required [(ngModel)]="inputPhone" placeholder="123-123-1234">
+    <span id="phoneValidity">{{ phoneCheck }}</span>
+  </p>
+  <p>Date of Birth: <input type="date" id="loginBirth" name="loginBirth" required [(ngModel)]="inputBirth" placeholder="mm/dd/yyyy">
+    <span id="BirthValidity">{{ birthCheck }}</span>
+  </p>
+  <p>ZIP: <input type="text" id="loginZip" name="loginZip" required [(ngModel)]="inputZIP" placeholder="five digits">
+    <span id="ZipValidity">{{ zipCheck }}</span>
+  </p>
+  <p>Password: <input type="password" id="loginPassword" name="loginPassword" required [(ngModel)]="inputPassword" >
+    <span id="passwordValidity">{{ passwordCheck }}</span>
+  </p>
+  <p>Repeat Password: <input type="password" id="loginPassword2" name="loginPassword2" required [(ngModel)]="inputPassword2" >
+  </p>
+  <br><br>
+
+  <button type="submit" class="btn btn-primary" id="submit-login" value="Submit" (click)="onSubmit()">Submit</button>&nbsp;&nbsp;
+  <button type="reset" class="btn btn-primary" value="Reset">Clear</button>
+
+
+
+</form>
+</body>

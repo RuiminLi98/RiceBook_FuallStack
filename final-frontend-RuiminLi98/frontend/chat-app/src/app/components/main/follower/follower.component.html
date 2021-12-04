@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Ruimin Li">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Followers</title>
+</head>
+
+
+
+<body>
+<h1>Followers</h1> <br>
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+      <div class="row">
+
+        <ng-container *ngFor="let tempDummyFollowers of dummyFollowers" class="col-md-3"><br><br>
+        <br>
+            <div class="followers-box">
+              <img src="{{ tempDummyFollowers.image }}"  class="img-responsive">
+              <br>
+              <h5>follower name</h5>
+              <div class="text-black">{{ tempDummyFollowers.name}}</div>
+              <br>
+              <h5>Status</h5>
+              <div class="text-black">{{ tempDummyFollowers.status}}</div>
+              <br>
+              <button type="submit" class="btn btn-primary" id="remove-follers" value="Submit" (click)="removeFollowers(tempDummyFollowers.name)">Remove</button><br><br>
+            </div>
+          <br>
+        </ng-container>
+        <br>
+        <br>
+        <p>New Follower username: <input type="text" id="newFollower" name="newFollower" required [(ngModel)]="inputName" >&nbsp;&nbsp;
+          <button type="submit" class="btn btn-primary" id="submit-addFollower" value="Submit" (click)="createFollowers()">Add</button><br><br>
+          <span id="nameValidity">{{ nameCheck }}</span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>

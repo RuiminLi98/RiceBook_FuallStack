@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Ruimin Li">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login Page</title>
+</head>
+
+
+
+<body>
+<h1>Posts</h1> <br>
+<!--<button type="submit" id="submit-loadPost2" value="Submit" (click)="onSubmit2()">Load all Posts from followers</button>-->
+<button type="submit" class="btn btn-primary" id="submit-clearPostT" value="Submit" (click)="clearAllposts()" >Clear All posts</button>
+<span>     </span>
+<h3>New Post with Image</h3>
+<input type="text" id="newPost" name="newPost" required [(ngModel)]="inputNewPost" placeholder="Your Post here" >&nbsp;&nbsp;
+<p>
+  <input type="file" name="image" id="newImage" (change)="uploadImage()" >
+</p>
+<button type="submit" class="btn btn-primary" id="submit-newPost" value="Submit" (click)="newPost()">Post</button>&nbsp;&nbsp;
+<button type="submit" class="btn btn-primary" id="submit-clearPost" value="Submit" (click)="clearPost()">Clear Post</button>
+<br>
+<br>
+
+
+<h3>New text-only Post</h3>
+<input type="text" id="newTextOnlyPost" name="newPost" required [(ngModel)]="inputNewPost2" placeholder="Your Post here" >&nbsp;&nbsp;
+<button type="submit" class="btn btn-primary" id="submit-newTextOnlyPost" value="Submit" (click)="newPost2()">Post</button>&nbsp;&nbsp;
+<button type="submit" class="btn btn-primary" id="submit-clearTextOnlyPost" value="Submit" (click)="clearPost2()">Clear Post</button>
+<br>
+<br>
+
+<h3>Search Posts</h3>
+<input type="text" id="newSearch" name="newSearch" required [(ngModel)]="inputSearch" placeholder="search here" >&nbsp;&nbsp;
+<button type="submit" class="btn btn-primary" id="submit-newSearch" value="Submit" (click)="newSearch()">Search</button><br><br>
+<button type="submit" class="btn btn-primary" id="submit-showAllPost" value="Submit" (click)="showAllPosts()">Show all posts</button>
+<th width = "50%">   <app-show-post class="form"></app-show-post></th>
+<br>
+<br>
+<input type="text" id="editPostId" name="editPostId" required [(ngModel)]="inputNewTextId" placeholder="the edit article ID" >&nbsp;&nbsp;
+<input type="text" id="editPost" name="editPost" required [(ngModel)]="inputNewText" placeholder="the article new text" >&nbsp;&nbsp;
+<button type="submit" class="btn btn-primary" id="submit-edit" value="Submit" (click)="editText()">Edit Article</button><br><br>
+<br>
+<br>
+<input type="text" id="editCommentId" name="editCommentId" required [(ngModel)]="inputNewCommentId" placeholder="the comment article ID" >&nbsp;&nbsp;
+<input type="text" id="editCommentt" name="editCommentt" required [(ngModel)]="inputNewComment2" placeholder="article's new comment" >&nbsp;&nbsp;
+<button type="submit" class="btn btn-primary" id="submit-editt" value="Submit" (click)="editTextHere()">comment</button><br><br>
+
+<div class="main-content">
+  <div class="section-content section-content-p30">
+    <div class="container-fluid">
+      <div class="row">
+        <div *ngFor="let tempCurrPosts of tempPost" class="col-md-3">
+          <br>
+          <div class="followers-box">
+            <img src="{{ tempCurrPosts.url }}"  class="img-responsive">
+            <br>
+            <h5>id: </h5>
+            <div class="text-black">{{ tempCurrPosts._id}}</div>
+            <br>
+            <h5>author: </h5>
+            <div class="text-black">{{ tempCurrPosts.author}}</div>
+            <br>
+            <h5>timestamp: </h5>
+            <div class="text-black">{{ tempCurrPosts.date}}</div>
+            <br>
+            <h5>text: </h5>
+            <div class="text-black">{{tempCurrPosts.text}}</div>
+            <br>
+            <h5>comment: </h5>
+            <div class="text-black">
+              <ul>
+                <li *ngFor="let project of tempCurrPosts.comments">
+                  {{project.author + " comments: "}}{{project.text}}
+                </li>
+              </ul>
+            <br>
+              </div>
+<!--            <input type="text" id="editComment" name="editComment" required [(ngModel)]="inputNewComment" placeholder="Your comment here" >&nbsp;&nbsp;-->
+<!--            <button type="submit" class="btn btn-primary" id="submit-comment" value="Submit"> Comments</button><br><br>-->
+
+<!--            <button type="submit" class="btn btn-primary" (click)="showComments()">Show Comments</button><br>-->
+
+          </div>
+          <br>
+        </div>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>

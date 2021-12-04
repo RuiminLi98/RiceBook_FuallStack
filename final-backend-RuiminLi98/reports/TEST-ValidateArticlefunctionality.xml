@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+<testsuite name="Validate Article functionality" errors="0" tests="3" failures="0" time="0.231" timestamp="2021-11-18T23:18:59">
+  <testcase classname="Validate Article functionality" name="should get current user articles" time="0.076"></testcase>
+  <testcase classname="Validate Article functionality" name="should add an articles to the current user articles" time="0.059"></testcase>
+  <testcase classname="Validate Article functionality" name="should put an articles to the current user articles" time="0.093"></testcase>
+</testsuite>
+</testsuites>

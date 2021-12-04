@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Ruimin Li">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login Page</title>
+  <link rel="shortcut icon" href="#">
+</head>
+
+<body>
+  <button type="submit" class="btn btn-primary" id="submit-logout" value="Submit" (click)="logOut()">Log Out</button>&nbsp;&nbsp;
+  <button type="submit" class="btn btn-primary" id="submit-goProfile" value="Submit" (click)="goToProfile()">Go to Profile</button><br><br>
+  <img id="userImg" src="{{ imgUrl }}" width="300" height="300"/>
+  <br><p>User Name: <span id="userName" name="userName">{{ userName }}</span>
+    <br>
+    <span>Status: </span>
+    <span id="userStatus">{{userHeadLine}}</span>
+  <p>new status: <input type="text" id="changeuserStatus" name="changeuserStatus" required [(ngModel)]="inputNewStatus" placeholder="New Status" >
+    <button type="submit" class="btn btn-primary" id="submit-status" value="Submit" (click)="changeStatus()">Update Status</button>
+
+    <br><br>
+  <th width = "50%">   <app-follower class="form"></app-follower></th>
+</body>
