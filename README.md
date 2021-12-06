@@ -24,9 +24,9 @@ Main view: ability to update headline for user
 
 Main view: User can follow and unfollow another users in the database
 
-Main view: list of articles includes articles from logged in user and their followers
+Main view: Have list of articles includes articles from logged in user and their followers
 
-Main view: each article has a list of comments displayed
+Main view: Each article has image, text, timestamp, author and a list of comments displayed
 
 Main view: Users can add comments to articles
 
