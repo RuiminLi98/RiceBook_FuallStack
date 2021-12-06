@@ -1,6 +1,6 @@
 A full-stack app similar to "Facebook" developed by Ruimin Li .
 
-"frontend": "successful-dinosaurs.surge.sh", 
+"frontend": "https://successful-dinosaurs.surge.sh/", 
 
 "backend": "https://ruiminli.herokuapp.com"
 
