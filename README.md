@@ -4,6 +4,8 @@ A full-stack app similar to "Facebook" developed by Ruimin Li .
 
 "backend": "https://ruiminli.herokuapp.com"
 
+backend api: https://www.clear.rice.edu/comp431/data/api.html#api
+
 Frontend use Angular, Backend use Node.js.
 
 Database use MongoDB.
