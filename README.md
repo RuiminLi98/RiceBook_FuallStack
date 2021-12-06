@@ -1,3 +1,4 @@
+A full-stack app similar to Facebook.
 "frontend": "successful-dinosaurs.surge.sh", 
 "backend": "https://ruiminli.herokuapp.com"
 
