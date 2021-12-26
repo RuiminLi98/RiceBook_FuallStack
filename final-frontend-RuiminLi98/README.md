@@ -6,5 +6,3 @@ username: test3     password: 1
 "frontend": "successful-dinosaurs.surge.sh", 
 "backend": "https://ruiminli.herokuapp.com"
 
-
-use 1 slip day, thank you
