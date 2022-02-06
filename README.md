@@ -1,4 +1,4 @@
-A full-stack app similar to "Facebook" developed by Ruimin Li .
+A full-stack app that allow users to share their experiences, connect with friends developed by Ruimin Li.
 
 "frontend": "https://successful-dinosaurs.surge.sh/", 
 
