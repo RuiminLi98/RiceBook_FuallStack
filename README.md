@@ -1,9 +1,5 @@
 A full-stack app that allow users to share their experiences, connect with friends developed by Ruimin Li.
 
-"frontend": "https://successful-dinosaurs.surge.sh/", 
-
-"backend": "https://ruiminli.herokuapp.com"
-
 backend api: https://www.clear.rice.edu/comp431/data/api.html#api
 
 Frontend use Angular, Backend use Node.js.
